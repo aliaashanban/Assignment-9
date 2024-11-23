@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <!&==================--fontstyle=================-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+<title>Book mark</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+    <div class="container py-4">
+                            <!^--=============header-section==========================-->
+        <header>
+            <h1 class="w-25 mx-auto py-5 position-relative">Bookmarker</h1>
+            <div class="border-bottom "></div>
+        </header>
+        <!^--=============form-title==========================-->
+        <section class="py-3" >
+            <div class="book-mark-title">
+                <h2 class="py-3 text-center ">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                </h2>
+            </div>
+            <div class="form-section">
+            <div class="site-name w-100 d-flex flex-column justify-content-center ">
+                <label for="bookmarkName" class="pb-2 fw-semibold">
+                  <i class="fa-solid fa-book-bookmark pe-2"></i>
+                  Site Name</label>
+                <input oninput="validateForm(this)" type="text" placeholder="Bookmark Name" class="form-control  py-3 " id="bookmarkName">
+              </div>
+              <div class="site-url w-100 d-flex flex-column justify-content-center py-3 ">
+                <label for="bookmarkURL" class="pb-2 fw-semibold">
+                  <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                <input oninput="validateForm(this)" type="url" placeholder="Website URL" class="form-control py-3" id="bookmarkURL">
+              </div> 
+              <div class="submit d-flex justify-content-center align-items-center ">
+              <button class="btn btn-submit btn-danger  px-5 mx-auto text-center text-white" id="submitBtn">Submit</button>
+            </div>
+            </div>
+        </section>
+        <div class="border-bottom mt-3 "></div>
+
+        <table class="table mt-4 text-center ">
+            <thead>
+              <tr>
+              <th class="text-capitalize">Index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr>
+           </thead>
+           <tbody id="tableContent"></tbody>
+          </table>    
+    </div>
+</main>
+<div id="lightBoxContainer" class="d-none">
+  <div id="lightBox" class="box-conent bg-white p-4 rounded-2 shadow-lg">
+    <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+      <div class="circles d-flex flex-row">
+        <span class="rounded-circle me-2 cir1"></span>
+        <span class="rounded-circle me-2 cir2"></span>
+        <span class="rounded-circle me-2 cir3"></span>
+      </div>
+      <button class="btn border-0" id="closeBtn">
+        <i class="fa-solid fa-xmark close fs-3"></i>
+      </button>
+    </header>
+    <p class="m-0 pb-2 no-valid">
+      Site Name or Url is not valid, Please follow the rules below :
+    </p>
+    <ol class="rules list-unstyled m-0">
+      <li>
+        <i class="fa-regular fa-circle-right p-2"></i>Site name must
+        contain at least 3 characters
+      </li>
+      <li>
+        <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+        valid one
+      </li>
+    </ol>
+  </div>
+
+</div>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
